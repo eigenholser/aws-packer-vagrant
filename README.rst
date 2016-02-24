@@ -34,7 +34,7 @@ See the `AWS IAM documentation <http://docs.aws.amazon.com/IAM/latest/UserGuide/
 The Packer build template depends on two environment variables that must be
 set or provided on the command line. They specify the AWS region and AMI ID.
 Set these environment variables as needed. The following settings work at the
-time of this commmit::
+time of this commit::
 
     export AWS_REGION="us-east-1"
     export AWS_SOURCE_AMI="ami-7b386c11"
