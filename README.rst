@@ -73,6 +73,10 @@ When the build is complete, Packer will output the AWS region and AMI ID. You
 will need that for Vagrant. Save the information and initialize the environment
 variables as described above.
 
+Build the Vagrant box as described. Then add it::
+
+    vagrant box add packer-starter vagrant_box/aws.box
+
 Then invoke Vagrant::
 
     vagrant up
@@ -82,6 +86,10 @@ Once Vagrant has spun up your EC2 instance you may just::
     vagrant ssh
 
 to get a shell on the box.
+
+Shut down the Vagrant box when done to avoid AWS charges::
+
+    vagrant halt
 
 -----
 Notes
