@@ -10,10 +10,9 @@ Packer build template, a ``Vagrantfile``, and a dummy box for AWS.
 Install Packer and Vagrant
 --------------------------
 
-Install `Packer <https://www.packer.io/downloads.html>` and
-`Vagrant <https://www.vagrantup.com/downloads.html>`. Then install the
-`Vagrant AWS Provider <https://github.com/mitchellh/vagrant-aws>`.
---------------------------
+Install `Packer <https://www.packer.io/downloads.html>`_ and
+`Vagrant <https://www.vagrantup.com/downloads.html>`_. Then install the
+`Vagrant AWS Provider <https://github.com/mitchellh/vagrant-aws>`_.
 
 -------------
 Configuration
@@ -65,6 +64,7 @@ I suggest setting them externally.
 ----------
 Invokation
 ----------
+
 To invoke the Packer build::
 
     packer build packer-quick-start.json
