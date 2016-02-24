@@ -73,7 +73,7 @@ When the build is complete, Packer will output the AWS region and AMI ID. You
 will need that for Vagrant. Save the information and initialize the environment
 variables as described above.
 
-Build the Vagrant box as described. Then add it::
+Build the Vagrant box `as described <https://github.com/eigenholser/aws-packer-vagrant/tree/master/vagrant_box>`_. Then add it::
 
     vagrant box add packer-starter vagrant_box/aws.box
 
