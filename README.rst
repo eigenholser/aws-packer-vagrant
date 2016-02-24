@@ -29,7 +29,7 @@ should be set somewhere outside of your repository or from a file that is
 Packer will look for those environment variables during the build. The included
 ``Vagrantfile`` also references them.
 
-See the AWS IAM documentation for best practices.
+See the `AWS IAM documentation <http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html>`_ for best practices.
 
 The Packer build template depends on two environment variables that must be
 set or provided on the command line. They specify the AWS region and AMI ID.
