@@ -1,0 +1,16 @@
+{
+    "variables": {
+        "region": "{{ env `AWS_REGION` }}",
+        "source_ami": "{{ env `AWS_SOURCE_AMI` }}",
+    },
+    "builders": [
+        {
+          "type": "amazon-ebs",
+          "region": "us-east-1",
+          "source_ami": "ami-7b386c11",
+          "instance_type": "t1.micro",
+          "ssh_username": "ubuntu",
+          "ami_name": "packer-quick-start {{timestamp}}"
+        }
+    ]
+}
