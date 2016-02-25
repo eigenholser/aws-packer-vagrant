@@ -15,5 +15,15 @@
           "ssh_password": "{{ user `ssh_password` }}",
           "ami_name": "packer-quick-start {{timestamp}}"
         }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "scripts": [
+                "scripts/post_build.sh",
+                "scripts/python_deps.sh"
+            ],
+            "execute_command": "echo {{ user `ssh_password` }} | {{ .Vars }} sudo -E -S bash '{{ .Path }}'"
+        }
     ]
 }
