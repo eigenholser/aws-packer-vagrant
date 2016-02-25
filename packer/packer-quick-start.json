@@ -1,7 +1,7 @@
 {
     "variables": {
         "region": "{{ env `AWS_REGION` }}",
-        "source_ami": "{{ env `AWS_SOURCE_AMI` }}",
+        "source_ami": "{{ env `AWS_SOURCE_AMI` }}"
     },
     "builders": [
         {
