@@ -7,13 +7,13 @@
     },
     "builders": [
         {
-          "type": "amazon-ebs",
-          "region": "us-east-1",
-          "source_ami": "ami-7b386c11",
-          "instance_type": "t1.micro",
-          "ssh_username": "{{ user `ssh_username` }}",
-          "ssh_password": "{{ user `ssh_password` }}",
-          "ami_name": "packer-quick-start {{timestamp}}"
+            "type": "amazon-ebs",
+            "region": "us-east-1",
+            "source_ami": "ami-7b386c11",
+            "instance_type": "t1.micro",
+            "ssh_username": "{{ user `ssh_username` }}",
+            "ssh_password": "{{ user `ssh_password` }}",
+            "ami_name": "packer-quick-start {{timestamp}}"
         }
     ],
     "provisioners": [
