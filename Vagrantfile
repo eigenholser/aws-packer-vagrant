@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     #aws.session_token = "SESSION TOKEN"
     aws.keypair_name = ENV['AWS_KEYPAIR_NAME']
     aws.instance_type = "t1.micro"
-    aws.security_groups = [ "ENV['AWS_SECURITY_GROUP']" ]
+    aws.security_groups = [ ENV['AWS_SECURITY_GROUP'] ]
     aws.region_config "ENV['AWS_REGION']", :ami => "ENV['AWS_AMI_ID']"
 
     override.ssh.username = "ubuntu"
