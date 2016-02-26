@@ -2,6 +2,8 @@
     "variables": {
         "ssh_username": "ubuntu",
         "ssh_password": "ubuntu",
+        "ssh_keypair_name": "{{ env `AWS_KEYPAIR_NAME` }}",
+        "ssh_private_key_file": "{{ env `AWS_PRIVATE_KEY_PATH` }}",
         "region": "{{ env `AWS_REGION` }}",
         "source_ami": "{{ env `AWS_SOURCE_AMI` }}"
     },
@@ -13,6 +15,8 @@
             "instance_type": "t1.micro",
             "ssh_username": "{{ user `ssh_username` }}",
             "ssh_password": "{{ user `ssh_password` }}",
+            "ssh_keypair_name": "{{ user `ssh_keypair_name` }}",
+            "ssh_private_key_file": "{{ user `ssh_private_key_file` }}",
             "ami_name": "packer-quick-start {{timestamp}}"
         }
     ],
