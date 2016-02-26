@@ -1,3 +1,17 @@
+$bootstrap = <<BOOTSTRAP
+echo "Configuring environment"
+echo 'export WORKON_HOME=\$HOME/.virtualenvs' > /home/ubuntu/.bash_environment
+echo 'export PROJECT_HOME=/vagrant' >> /home/ubuntu/.bash_environment
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> /home/ubuntu/.bash_environment
+echo 'workon senior-project' >> /home/ubuntu/.bash_environment
+
+echo  >> /home/ubuntu/.bashrc
+echo '######' >> /home/ubuntu/.bashrc
+echo 'source \$HOME/.bash_environment' >> /home/ubuntu/.bashrc
+source /usr/local/bin/virtualenvwrapper.sh; mkvirtualenv --system-site-packages senior-project
+#chown ubuntu:ubuntu /home/ubuntu/.bash_environment
+BOOTSTRAP
+
 Vagrant.configure("2") do |config|
   config.vm.box = "packer-starter"
 
@@ -12,5 +26,6 @@ Vagrant.configure("2") do |config|
 
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = ENV['AWS_PRIVATE_KEY_PATH']
+    override.vm.provision :shell, :inline => $bootstrap, privileged: false
   end
 end
