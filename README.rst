@@ -62,7 +62,7 @@ These are not necessarily sensitive. But don't commit them to your repository.
 I suggest setting them externally.
 
 ----------
-Invokation
+Invocation
 ----------
 
 To invoke the Packer build::
